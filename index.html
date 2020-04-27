@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sejin Kim</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="mhmm">
+            <h1>{{ header }}</h1>
+            <input type="text" v-model="header">
+        </div>
+        <script src="https://unpkg.com/vue"></script>
+        <script>
+            new Vue ({
+                el: '#mhmm', 
+                data: {
+                    header: 'Im ready to party!'
+                }
+            });
+        </script>
+    </body>
+</html>
