@@ -2,7 +2,7 @@ body {
     background: #EFF8FF;
     height: 100vh;
     width: 100vw;
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Roboto, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,7 +10,7 @@ body {
     padding: 0;
 }
 
-#shopping-list {
+#mhmm {
     background: #FFF;
     padding: 2rem;
     margin: 1rem;

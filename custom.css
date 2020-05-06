@@ -1,0 +1,27 @@
+body {
+    background: #EFF8FF;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.nav {
+    font-style: bold;
+}
+
+.flex-container {
+    display: flex;
+    width: 70%;
+    align-items: left;
+}
+
+
+i {
+    font-size:20px;
+}
+
+.b-navbar-item {
+    font-style:italic;
+}
+
+.b-navbar .b-navbar-brand {
+    font-style:bold;
+}
