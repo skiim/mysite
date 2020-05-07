@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-s cale=1.0">
         <title>Sejin Kim</title>
         <!-- Load required Bootstrap and BootstrapVue CSS -->
         <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
@@ -25,42 +25,36 @@
     </head>
     <body>
         <div id='app'>
-            <b-navbar toggleable="md" type="dark" variant="dark" sticky>
-                <b-container fluid="md" class = "my-2">
-                    <b-navbar-brand tag="h1" href="index.html">Sejin Kim</b-navbar-brand>
+            <b-navbar toggleable="sm" type="dark" variant="dark" sticky>
+                <b-container fluid="md" class="my-2">
+                    <b-navbar-brand tag="h1" class = "ml-3" href="index.html">Sejin Kim</b-navbar-brand>
                     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-                    <b-navbar-nav class="mx-auto">
-                            <b-nav-item href="#">
+                    
+                    <b-collapse id="nav-collapse" is-nav> 
+                        <b-navbar-nav class="mx-auto" align="center">
+                            <b-nav-item href="https://github.com/skiim/" target="_blank">
                                 <i class="fab fa-github"></i>
                             </b-nav-item>
-                            <b-nav-item href="#">
+                            <b-nav-item href="https://www.linkedin.com/in/sejin-k-232111115/" target="_blank">
                                 <i class="fab fa-linkedin"></i>
                             </b-nav-item>
-                            <b-nav-item href="#">
+                            <b-nav-item href="/assets/Sejin Kim - Resume_2020.pdf" target="_blank">
                                 <i class="fas fa-file-pdf"></i>
                             </b-nav-item>
-                    </b-navbar-nav>
-                    <b-collapse id="nav-collapse" is-nav class="mr-auto"> 
+                        </b-navbar-nav>
+
                         <!-- Right aligned nav items -->
-                        <b-navbar-nav class="ml-auto">
-                
+                        <b-navbar-nav class="ml">
+                            <b-navbar-nav>
+                                <b-nav-item href="#">About</b-navbar-item>
+                            </b-navbar-nav>
                             <b-nav-item-dropdown text="Projects" right>
                                 <b-dropdown-item href="#">Spotify Library Visualizer</b-dropdown-item>
                                 <b-dropdown-item href="#">AI Royale</b-dropdown-item>
                             </b-nav-item-dropdown>
-
                             <b-navbar-nav>
-                                <b-nav-item href="#">Resume</b-navbar-item>
+                                <b-nav-item href="/assets/Sejin Kim - Resume_2020.pdf" target="_blank">Resume</b-navbar-item>
                             </b-navbar-nav>
-
-                            <b-nav-item-dropdown right>
-                                <!-- Using 'button-content' slot -->
-                                <template v-slot:button-content>
-                                <em>User</em>
-                                </template>
-                                <b-dropdown-item href="#">Profile</b-dropdown-item>
-                                <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-                            </b-nav-item-dropdown>
                         </b-navbar-nav>
                     </b-collapse>
                 </b-container>
