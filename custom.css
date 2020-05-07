@@ -3,10 +3,6 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-.nav {
-    font-style: bold;
-}
-
 .flex-container {
     display: flex;
     width: 70%;
@@ -19,12 +15,9 @@ body {
 
 i {
     font-size:24px;
+    transition: ease-in-out all .3s;
 }
 
-.b-navbar-item {
-    font-style:italic;
-}
-
-.b-navbar .b-navbar-brand {
-    font-style:bold;
+.nav-link {
+    transition: ease-in-out all .3s;
 }
