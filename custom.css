@@ -3,16 +3,6 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-.flex-container {
-    display: flex;
-    width: 70%;
-    align-items: left;
-}
-
-/* .navbar {
-    font-size: 20px;
-} */
-
 i {
     font-size:24px;
     transition: ease-in-out all .3s;
