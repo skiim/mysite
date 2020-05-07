@@ -7,7 +7,7 @@
         <!-- Load required Bootstrap and BootstrapVue CSS -->
         <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
         <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"/>
-        <link type="text/css" rel="stylesheet" href="/custom.css"/>
+        <link type="text/css" rel="stylesheet" href="custom.css"/>
 
         <!-- Load polyfills to support older browsers -->
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
@@ -20,12 +20,15 @@
         <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
 
         <!-- Font Awesome :Kit-->
-        <script src="https://kit.fontawesome.com/a8ade32983.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a8ade32983.js" crossorigin="anonymous" ></script>
+
+        <!-- JQuery -->
+        <script src="https://unpkg.com/browse/jquery@3.3.1/dist/jquery.min.js" crossorigin="anonymous"></script>
         
     </head>
     <body>
+        <div id="navigation"></div>
         <div id='app'>
-            
             <b-navbar toggleable="sm" type="dark" variant="dark" sticky>
                 <b-container fluid="md" class="my-2">
                     <b-navbar-brand tag="h1" class = "ml-3" href="index.html">Sejin Kim</b-navbar-brand>
@@ -64,6 +67,6 @@
                 </b-container>
             </b-navbar>
         </div>
-        <script src="/script.js"></script>
+        <script type="text/javascript" src=script.js></script>
     </body>
 </html>

@@ -2,7 +2,7 @@ new Vue ({
     el: '#app'
 });
 
-("#navigation").load("navbar.html");
+
 // new Vue ({
 //     el: '#mhmm', 
 //     data: {
