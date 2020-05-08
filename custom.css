@@ -3,11 +3,22 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-i {
+#navi i {
     font-size:24px;
-    transition: ease-in-out all .3s;
 }
 
 .nav-link {
     transition: ease-in-out all .3s;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h4 {
+    font-weight: 600;
+}
+
+h5 {
+    font-style: italic;
 }
