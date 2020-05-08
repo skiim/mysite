@@ -1,6 +1,6 @@
 Vue.component ('navigation', {
     template: `<div id='app'>
-        <b-navbar toggleable="sm" type="dark" variant="dark" sticky>
+        <b-navbar toggleable="sm" type="dark" variant="warning" sticky>
             <b-container fluid="md" class="my-2">
                 <b-navbar-brand tag="h1" class = "ml-3" href="index.html">Sejin Kim</b-navbar-brand>
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
