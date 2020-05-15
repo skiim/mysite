@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-s cale=1.0">
+        <title>Sejin Kim</title>
+        <!-- Load required Bootstrap and BootstrapVue CSS -->
+        <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"/>
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+        <link type="text/css" rel="stylesheet" href="custom.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+
+        <!-- Load polyfills to support older browsers -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
+
+        <!-- Load Vue followed by BootstrapVue -->
+        <script src="https://unpkg.com/vue@latest/dist/vue.min.js"></script>
+        <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+
+        <!-- Load the following for BootstrapVueIcons support -->
+        <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+
+        <!-- Font Awesome Kit-->
+        <script src="https://kit.fontawesome.com/a8ade32983.js" crossorigin="anonymous" ></script>
+
+        <!-- jQuery -->
+        <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id='app'>
+            <navigation></navigation>
+            <b-container fluid="md mt-4">
+                <br>
+                <b-row>
+                    <b-col>
+                        <b-card class="shadow animate__animated animate__zoomIn">
+                            <h2>New Trades</h2><br>
+                            <b-form @submit="onSubmit">
+                                <b-form-group label-cols-md="4" label="Stock Symbol">
+                                    <b-form-input
+                                        v-model="form.stock"
+                                        type="text"
+                                        required
+                                        :formatter="upperForm"
+                                        list="stocks-list"
+                                        placeholder="Ex: AAPL, GOOG, etc">
+                                    </b-form-input>
+                                    <b-form-datalist id="stocks-list" :options="tickers"></b-form-datalist>
+                                </b-form-group>
+                                <b-form-group inline label-cols-md="4" label="Quantity">
+                                    <!-- <b-form-spinbutton min=-99999 max=99999 id="input-2" v-model="form.num" inline repeat-step-multiplier=5></b-form-spinbutton> -->
+                                    <b-form-input
+                                        v-model="form.num"
+                                        type="number"
+                                        required>
+                                    </b-form-input>
+                                </b-form-group>
+                                <b-form-group label-cols-md="4" label="Price">
+                                    <b-input-group prepend="$">
+                                        <b-form-input
+                                            v-model="form.price"
+                                            required
+                                            placeholder="Price Bought/Sold"
+                                            @blur="updateExchange"
+                                            >
+                                        </b-form-input>
+                                    </b-input-group>
+                                </b-form-group>
+                                <b-form-group label="Date" label-cols-md="4">
+                                    <b-form-datepicker v-model="form.date" label="Date"></b-form-datepicker>
+                                </b-form-group>
+                                <b-form-group label="Time" label-cols-md="4">
+                                    <b-input-group>
+                                        <b-form-timepicker v-model="form.date" locale="en"></b-form-timepicker>
+                                        <!-- <b-form-input v-model="form.date" type="text" placeholder="HH:mm"></b-form-input> -->
+                                    </b-input-group>
+                                </b-form-group>
+                                <b-form-group label-cols-md="4" label="Total">
+                                    <b-input-group prepend="$">
+                                        <b-form-input
+                                            v-model="form.total"
+                                            required
+                                            placeholder="Total Price Bought/Sold"
+                                            @blur="updateExchange"
+                                            >
+                                        </b-form-input>
+                                    </b-input-group>
+                                </b-form-group>
+                                <b-form-group label-cols-md="4" label="Exchange Rate">
+                                    <b-input-group prepend="$">
+                                        <b-form-input
+                                                v-model="form.exchange"
+                                                disabled
+                                                >
+                                        </b-form-input>
+                                    </b-input-group>
+                                </b-form-group>
+                                <b-form-group>
+                                    <b-button block type="submit" variant="warning" class="auto-mx">Submit</b-button>
+                                </b-form-group>
+                            </b-form>
+                        </b-card>
+                    </b-col>
+                    <b-col>
+                        <h2 align="center">Trade History</h2><br>
+                        <b-card-group-deck v-for="holding in holdings" :key="holding.date">
+                            <b-card class="mb-2 shadow-sm px-0" style="height: 3rem; vertical-align:super;">
+                                <b-row align="center">
+                                    <b-col><b>{{holding.symbol}}</b></b-col>
+                                    <b-col cols="4">$ {{ holding.price.toFixed(2) }}</b-col>
+                                    <b-col cols="4">{{ holding.num }}</b-col>
+                                    <b-col >{{ holding.rate }}</b-col>
+                                </b-row>
+                            </b-card>
+                        </b-card-group-deck>
+                    </b-col>
+                </b-row>
+            </b-container>
+        </div>
+        
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

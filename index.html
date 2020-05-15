@@ -8,7 +8,8 @@
         <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
         <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"/>
         <link type="text/css" rel="stylesheet" href="custom.css"/>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
 
         <!-- Load polyfills to support older browsers -->
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
@@ -23,85 +24,20 @@
         <!-- Font Awesome Kit-->
         <script src="https://kit.fontawesome.com/a8ade32983.js" crossorigin="anonymous" ></script>
 
+        <!-- jQuery -->
+        <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id='app'>
             <navigation></navigation>
-            <b-container fluid="md mt-4">
-                <b-row>
-                    <b-col></b-col>
-                    <b-col cols="11">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <br>
-                                        <h3 class="card-title">Machine Learning Researcher</h3>
-                                        <h5>
-                                            <a class="card-title" href="#">Haibe-Kains Lab</a>
-                                        </h5>                            
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <p class="card-text">
-                                            <ul>
-                                                <li>Optimized <b>convolutional neural nets</b> for 3D medical images to autonomously segment oropharyngeal cancer tumours</li>
-                                                <li>Worked on <b>open-source package</b> for data processing and quality assurance for the radiomics research community</li>
-                                                <li><b>Co-author</b> of manuscript pending publication on tumour segmentation and survival prediction</li>
-                                            </ul>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <br>
-                                        <h3 class="card-title">Founder, Co-President</h3>
-                                        <h5>
-                                            <a class="card-title" href="#">Western AI</a>
-                                        </h5>                            
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <p class="card-text">
-                                            <ul>
-                                                <li>Created on-campus organization of <b>400+ members</b></li>
-                                                <li>Liaised with faculty members and industry sponsors to collaborate on student-led project teams</li>
-                                                <li><b>Built machine learning curriculum</b> to teach computer science / business / medical science students using <b><em>Python, Jupyter, and Keras</em></b></li>
-                                            </ul>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <br>
-                                        <h3 class="card-title">Student Researcher</h3>
-                                        <h5>
-                                            <a class="card-title" href="#">Schimmer Lab</a>
-                                        </h5>                            
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <p class="card-text">
-                                            <ul>
-                                                <li>Investigated potential therapy for acute myeloid leukemia</li>
-                                                <li>Conducted data analysis and visualization with <b>R tidyverse packages</b></li>
-                                                <li>Co-author of papers / abstracts published in peer-reviewed journals; <em>Cell Stem Cell (<b>IF: 21.5</b>), Blood (<b>IF: 16.6</b>), Cancer Research (<b>IF: 9.1</b></em>)</li>
-                                            </ul>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </b-col>
-                    <b-col></b-col>
-                </b-row>
+            <b-container fluid="sm mt-4" style="width: 750px">
+                <h1 class="pt-4"style="font-size:72px;font-family:'Nunito','sans-serif'">Hello Amy.</h1>
+                <br>
+                <h3 style="font-size:24px;font-family:'Nunito','sans-serif';font-weight:300">Please click here to download your movie:</h3></b-col>
+                <b-list-group>
+                    <b-list-group-item variant="warning" href="https://yts.mx/torrent/download/48D3ABA2D9EEF7CE9E9E6756F34E199B0F4EF1DA">About Time (2013)</b-list-group-item>
+                    <b-list-group-item variant="warning" href="https://yts.mx/torrent/download/48D3ABA2D9EEF7CE9E9E6756F34E199B0F4EF1DA">About Time (2013)</b-list-group-item>
+                </b-list-group>               
             </b-container>
         </div>
         <script type="text/javascript" src=script.js></script>

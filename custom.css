@@ -1,3 +1,7 @@
+:root {
+    --animate-delay: 0.5s;
+}
+
 body {
     background: #fffdef;
     font-family: 'Nunito Sans', sans-serif;
@@ -22,3 +26,16 @@ h4 {
 h5 {
     font-style: italic;
 }
+
+h6 {
+    font-size: 18px;
+}
+
+a {
+    color: #cca71b;
+}
+
+a:hover {
+    color: #7a6100;
+}
+
